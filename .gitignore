@@ -9,3 +9,5 @@ utils/flask_session
 # utils/db.sqlite
 utils/*.log
 .*
+build
+dist

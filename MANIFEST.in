@@ -1,2 +1,2 @@
 include utils/templates/*
-include utils/config/*
+include utils/config/*.conf
