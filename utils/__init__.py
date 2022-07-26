@@ -56,5 +56,5 @@ from .generate import generate as generate_blueprints
 app.register_blueprint(generate_blueprints)
 
 
-if __name__ == "__main__":
-	app.run()
+#if __name__ == "__main__":
+#	app.run()

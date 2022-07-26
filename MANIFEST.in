@@ -1,2 +1,3 @@
 include utils/templates/*
+include utils/*.sqlite
 include utils/config/*.conf
