@@ -6,6 +6,6 @@ flask_session
 utils/__pycache__
 utils/config
 utils/flask_session
-utils/db.sqlite
+# utils/db.sqlite
 utils/*.log
 .*

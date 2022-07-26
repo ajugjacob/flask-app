@@ -13,11 +13,10 @@ app = Flask(__name__)
 	
 app.config.from_pyfile(os.path.join(".", "config/app.conf"), silent=False)
 
-app.config['SECRET_KEY'] = 'daowindq219e489h'
+app.config['SECRET_KEY'] = app.config.get("SECRET_KEY")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = app.config.get("DB_URI")
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db.sqlite"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 app.config["SESSION_PERMANENT"] = False
@@ -57,5 +56,5 @@ from .generate import generate as generate_blueprints
 app.register_blueprint(generate_blueprints)
 
 
-#if __name__ == "__main__":
-#	app.run()
+if __name__ == "__main__":
+	app.run()
