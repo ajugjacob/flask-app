@@ -2,7 +2,7 @@ import os
 from setuptools import setup, find_packages
 
 setup(
-    name = "url_shortener",
+    name = "urlshortener",
     version = "0.0.1",
     author = "Aju George Jacob",
     author_email = "ajugjacob@gmail.com",
