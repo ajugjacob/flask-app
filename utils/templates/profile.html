@@ -1,0 +1,38 @@
+{% extends "base_auth.html" %}
+	{% block content %}
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+		    		<div class="notification is-danger">
+				{{ messages[0] }}
+		   	 	</div>
+			{% endif %}
+		{% endwith %}	
+	
+	<h2 class="title is-2">Random hash</h2>
+	<form action="/generate_hash" method="POST">
+	   <div class="field">
+		  <label class="label">Website Link</label>
+		  <div class="control">
+		    <input class="input" type="text" name="url" placeholder="eg: https://en.wikipedia.org/wiki/Football">
+		  </div>
+		  <button class="button is-secondary" type="submit">Submit</button>
+	    </div>
+	</form>
+	<h2 class="title is-2">Custom hash</h2>
+	<form action="/custom_hash" method="POST">
+	    <div class="field">
+		  <label class="label">Website Link</label>
+		  <div class="control">
+		    <input class="input" name="custom-url" type="text" placeholder="eg: https://en.wikipedia.org/wiki/Football">
+		  </div>
+	    </div>
+
+	    <div class="field">
+		  <label class="label">Hash</label>
+		  <div class="control">
+		    <input class="input" name="hash" type="text" placeholder="eg: football">
+		  </div>
+	    </div>
+		  <button class="button is-secondary" type="submit">Submit</button>
+	 </form>
+{% endblock  %}

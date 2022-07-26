@@ -1,0 +1,33 @@
+{% extends "base_auth.html" %}
+{% block content %}
+
+{% if urls is defined  %}
+<div class="columns is-mobile is-centered">
+	<table class="table is-fullwidthe">
+	  <thead>
+	    <tr>
+	      <th>Original URL</th>
+	      <th>Hashed URL</th>
+	      <th>Time Created</th>
+	      <th>Delete</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {% for item in urls  %}
+	    <tr>
+	      <td>{{ item.url }}</td>
+	      <td>http://localhost:5000/{{ item.short_hash }}</td>
+	      <td>{{ item.time_created }}</td>
+	      <td><a href="{{url_for("generate.delete",uid=item.id)}}" class="button is-danger">Delete</a></td>
+	   </tr>
+	   {% endfor  %}
+	</tbody>
+	</table>
+</div>
+{% else %}
+<div class="columns is-mobile is-centered">
+	<h2 class="title is-2">Nothing to Show</h2>
+</div>
+{% endif  %}
+
+{% endblock %}

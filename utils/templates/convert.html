@@ -1,0 +1,16 @@
+{% extends "base_auth.html" %}
+
+{% block content %}
+
+<h2 class="title is-2">Find the URL</h2>
+<form action="/convert" method="POST">
+   <div class="field">
+	  <label class="label">Short Hash</label>
+	  <div class="control">
+	  	 <input class="input" type="text" name="short_url" placeholder="eg: AsW2EpQr">
+	  </div>
+	  <button class="button is-secondary" type="submit">Submit</button>
+    </div>
+</form>
+
+{% endblock %}
