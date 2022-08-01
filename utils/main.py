@@ -32,4 +32,4 @@ def custom_redirect(url_hash):
 @main.route("/success")
 @login_required
 def success():
-	return render_template("success.html", original_url=session["url"], custom_url="3.110.132.199/"+session["hash"])
+	return render_template("success.html", original_url=session["url"], custom_url=session["hash"])
