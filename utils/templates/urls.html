@@ -16,7 +16,7 @@
 	  {% for item in urls  %}
 	    <tr>
 	      <td>{{ item.url }}</td>
-	      <td>http://localhost:5000/{{ item.short_hash }}</td>
+	      <td>3.110.132.199/{{ item.short_hash }}</td>
 	      <td>{{ item.time_created }}</td>
 	      <td><a href="{{url_for("generate.delete",uid=item.id)}}" class="button is-danger">Delete</a></td>
 	   </tr>
